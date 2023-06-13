@@ -4,6 +4,7 @@ import countryData from "../data/countries.json";
 import pressIndexData from "../data/RSB_DataSet.json";
 import List from "./List";
 
+
 const handleCountry = (feature, layer) => {
   const countryName = feature.properties.ADMIN;
   layer.options.fillColor = "#fff";
@@ -87,6 +88,7 @@ const Map = () => {
         />
         <GeoJSON
           style={styleGeoJSON}
+          // data={geojsonData.features}
           data={countryData.features}
           onEachFeature={handleCountry}
         />

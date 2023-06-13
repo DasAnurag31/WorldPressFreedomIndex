@@ -20,7 +20,8 @@
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.11.2",
-    "react-share": "^4.4.1"
+    "react-share": "^4.4.1",
+    "topojson": "^3.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
