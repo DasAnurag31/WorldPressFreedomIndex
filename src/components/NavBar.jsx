@@ -3,6 +3,7 @@ import globe from "../assets/globe.svg";
 import { Link } from "react-router-dom";
 import shareIcon from "../assets/shareIcon.svg";
 import Share from "./Share";
+import downloadIcon from "../assets/downloadIcon.png"
 
 const NavBar = () => {
   const toggle = () => {
@@ -13,10 +14,16 @@ const NavBar = () => {
   return (
     <div className="z-30 relative">
       <div className="flex flex-col md:flex-row items-center justify-evenly backgroundA py-1">
-        <h1 className=" text-white text-center font-bold py-1 md:py-4 text-md md:text-4xl">
+        <h1 className=" text-cyan-400 text-center font-bold py-1 md:py-4 text-md md:text-4xl">
           World Press Freedom Index - 2022
         </h1>
-        <ul className="text-white text-center font-bold flex gap-4 items-center py-1">
+        <ul className="text-cyan-400  text-center font-bold flex gap-4 items-center py-1">
+          <button>
+            <a href="src\data\RSB_DataSet.json" download>
+              <img src={downloadIcon} alt="" className="w-6 h-6"/>
+            </a>
+          </button>
+
           <button>
             <Link to="/list">List</Link>
           </button>

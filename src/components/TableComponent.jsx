@@ -13,6 +13,9 @@ import Collapse from "@mui/material/Collapse";
 import IconButton from "@mui/material/IconButton";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+// import "/node_modules/flag-icons/css/flag-icons.min.css";
+
+
 
 const columns = [
   {
@@ -132,13 +135,19 @@ const TableComponent = () => {
             {/* Header of Table  */}
             <TableHead>
               <TableRow>
-                <TableCell style={{ backgroundColor: "slategray" }} />
+                <TableCell
+                  style={{
+                    borderTop: "1px solid white",
+                    backgroundColor: "#00111c",
+                  }}
+                />
                 {columns.map((column) => (
                   <TableCell
                     key={column.id}
                     style={{
                       minWidth: column.minWidth,
-                      backgroundColor: "slategray",
+                      backgroundColor: "#00111c",
+                      borderTop: "1px solid white",
                     }}
                   >
                     <span className="font-bold text-base text-white">

@@ -41,7 +41,7 @@ const List = () => {
             {filteredList.map((ele) => (
               <li
                 key={ele.Ranking}
-                className="cursor-pointer hover:bg-slate-900 max-h-12 h-fit flex items-center backdrop-blur-2xl font-semibold pr-2 mt-1 text-white"
+                className="cursor-pointer hover:bg-cyan-400 max-h-12 h-fit flex items-center backdrop-blur-2xl font-semibold pr-2 mt-1 text-white"
               >
                 <div
                   className={`w-[4%] h-10 ${
