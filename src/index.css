@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .custom-scroll::-webkit-scrollbar {
+    width: 5px;
+    margin-left: 1rem;
+  }
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: #212121;
+    border-radius: 5rem;
+  }
+  .custom-scroll::-webkit-scrollbar-track {
+    background: #d8dce3;
+    border-radius: 1rem;
+  }
+  .custom-scroll::-webkit-scrollbar-button {
+    display: none;
+  }
+  .backgroundA {
+    background-color: #00253e;
+  }
+  .backgroundB {
+    background-image: linear-gradient(
+      #00111c,
+      #001523,
+      #002137,
+      #00253e,
+      #00406c,
+      #006494,
+      #0582ca,
+      #00a6fb
+    );
+  }
+  .backgroundC {
+    background-image: linear-gradient(
+      #00a6fb,
+      #0582ca,
+      #006494,
+      #00406c,
+      #00253e,
+      #002137,
+      #001523,
+      #00111c
+    );
+  }
+}
+
+root {
+  width: 100%;
+ 
+  /* height: 100%; */
+  /* display: flex;
+  flex-grow: 1;
+  flex-direction: column; */
+}
+
+#mapContainer {
+  /* width: 80%;
+  height: 88vh; */
+}
+#popup {
+  font-weight: 750;
+  line-height: 0.1;
+  color: #8d99ae;
+}
+#country {
+  color: #2b2d42;
+  font-weight: 850;
+  font-size: x-large;
+  /* font-style: italic; */
+  font-family: "roboto";
+}
+#popup span {
+  color: #2b2d42;
+}
