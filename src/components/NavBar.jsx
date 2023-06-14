@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import globe from "../assets/globe.svg";
 import { Link } from "react-router-dom";
 import shareIcon from "../assets/shareIcon.svg";
 import Share from "./Share";
-import downloadIcon from "../assets/downloadIcon.png"
+import downloadIcon from "../assets/downloadIcon.png";
 
 const NavBar = () => {
   const toggle = () => {
@@ -18,26 +17,37 @@ const NavBar = () => {
           World Press Freedom Index - 2022
         </h1>
         <ul className="text-cyan-400  text-center font-bold flex gap-4 items-center py-1">
-          <button>
-            <a href="src\data\RSB_DataSet.json" download>
-              <img src={downloadIcon} alt="" className="w-6 h-6"/>
-            </a>
-          </button>
-
-          <button>
-            <Link to="/list">List</Link>
-          </button>
-          <button>
-            <Link to="/">Map</Link>
-          </button>
-          <div className="" onMouseOver={toggle}>
-            <img
-              className="w-5 h-5"
-              src={shareIcon}
-              alt="Share this On Socials"
-            />
-            {display && <Share setdisplay={setdisplay} />}
-          </div>
+          <li>
+            <button aria-label="download">
+              <a href="src\data\RSB_DataSet.json" download>
+                <img
+                  src={downloadIcon}
+                  alt="Download Icon"
+                  className="w-6 h-6"
+                />
+              </a>
+            </button>
+          </li>
+          <li>
+            <button aria-label="view list">
+              <Link to="/list">List</Link>
+            </button>
+          </li>
+          <li>
+            <button aria-label="view map">
+              <Link to="/">Map</Link>
+            </button>
+          </li>
+          <li>
+            <div className="" onMouseOver={toggle}>
+              <img
+                className="w-5 h-5"
+                src={shareIcon}
+                alt="Share this On Socials"
+              />
+              {display && <Share setdisplay={setdisplay} />}
+            </div>
+          </li>
         </ul>
       </div>
     </div>

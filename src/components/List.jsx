@@ -16,7 +16,7 @@ const List = () => {
   };
 
   return (
-    <section className="background rounded-md px-4 py-2 mx-auto w-[100%] md:w-[25%] md:mx-2 md:max-w-sm">
+    <section className="background rounded-md px-4 py-6 md:py-2 mx-auto w-[100%] md:w-[100%] md:mx-2 md:max-w-sm ">
       {/* Search Bar  */}
       <div className="w-[95%] mx-auto py-2">
         <legend className="sr-only">Find a Country</legend>

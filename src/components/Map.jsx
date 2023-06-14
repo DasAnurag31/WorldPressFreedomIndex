@@ -2,8 +2,9 @@ import React from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import countryData from "../data/countries.json";
 import pressIndexData from "../data/RSB_DataSet.json";
+import { useState } from "react";
 import List from "./List";
-
+import up from "../assets/up.svg";
 
 const handleCountry = (feature, layer) => {
   const countryName = feature.properties.ADMIN;
@@ -52,6 +53,7 @@ const handleCountry = (feature, layer) => {
     }
   });
 };
+
 const styleGeoJSON = () => {
   return {
     weight: 1,
@@ -64,10 +66,11 @@ const styleGeoJSON = () => {
 };
 
 const Map = () => {
+  const [openList, setopenList] = useState(true);
   return (
     <div className="w-[100%] backgroundB md:flex">
       <MapContainer
-        className="h-[88vh] w-[100%] md:w-[80%] z-0"
+        className="h-[88vh] w-[100%] md:w-[75%] z-0 absolute md:relative"
         id="mapContainer"
         center={[30.0, 50.0]}
         zoom={1.5}
@@ -82,10 +85,7 @@ const Map = () => {
         ]}
         touchZoom={[50.0, 50.0]}
       >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <GeoJSON
           style={styleGeoJSON}
           // data={geojsonData.features}
@@ -93,7 +93,30 @@ const Map = () => {
           onEachFeature={handleCountry}
         />
       </MapContainer>
-      <List />
+      <button
+        className="bg-black w-[100%] h-10x flex justify-center md:hidden absolute bottom-0 z-90"
+        onClick={() => {
+          setopenList(!openList);
+        }}
+        aria-label="toggle List"
+      >
+        <img
+          className={`w-10 h-8 transition delay-150 ${
+            openList ? "" : "rotate-180"
+          }`}
+          src={up}
+          alt="Toggle List"
+        />
+      </button>
+      <div
+        className={`z-20 bg-black md:bg-transparent ${
+          openList ? "hidden" : ""
+        } w-[100%] relative md:h-auto md:absolute md:right-0 md:w-[25%] md:block `}
+      >
+        <List />
+      </div>
+
+      {/* // list  */}
     </div>
   );
 };
