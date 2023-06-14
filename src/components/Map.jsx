@@ -94,7 +94,7 @@ const Map = () => {
         />
       </MapContainer>
       <button
-        className="bg-black w-[100%] h-10x flex justify-center md:hidden absolute bottom-0 z-90"
+        className="bg-black w-[100%] py-2 flex justify-center md:hidden absolute bottom-1 z-90"
         onClick={() => {
           setopenList(!openList);
         }}
