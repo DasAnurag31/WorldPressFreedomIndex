@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "./components/NavBar";
 import Map from "./components/Map";
-import ListIndex from "./components/ListIndex";
+
 import TableComponent from "./components/TableComponent";
 import { Route, Routes } from "react-router-dom";
 

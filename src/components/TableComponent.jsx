@@ -13,31 +13,29 @@ import Collapse from "@mui/material/Collapse";
 import IconButton from "@mui/material/IconButton";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-// import "/node_modules/flag-icons/css/flag-icons.min.css";
-
-
+import "/node_modules/flag-icons/css/flag-icons.min.css";
+import iso from "../data/country_iso.json";
 
 const columns = [
   {
     id: "Ranking",
     label: "Ranking",
     minWidth: 100,
-    align: "right",
-    format: (value) => value.toLocaleString("en-US"),
-  },
+    align: "center",
+    
+  },  
   {
     id: "Country",
     label: "Country",
     minWidth: 100,
-    align: "right",
-    format: (value) => value.toLocaleString("en-US"),
+    align: "left",
+   
   },
   {
     id: "Score",
     label: "Score",
     minWidth: 100,
-    align: "right",
-    format: (value) => value.toFixed(2),
+    align: "left",
   },
 ];
 
@@ -62,12 +60,24 @@ const Row = ({ row }) => {
           >
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
-          {/* Content of Each Col in a  Row  */}
         </TableCell>
+
+        {iso.map((ele) => {
+          let code =
+            ele.Country == row.Country ? ele.isoCode.toLowerCase() : ``;
+          return (
+            code && (
+              <TableCell>
+                <span className={`fi fi-${code}`}></span>
+              </TableCell>
+            )
+          );
+        })}
+
         {columns.map((column) => {
           const value = row[column.id];
           return (
-            <TableCell key={column.id}>
+            <TableCell key={column.id} align={column.align}>
               <span className="font-bold text-base text-slate-500">
                 {value}
               </span>
@@ -141,9 +151,16 @@ const TableComponent = () => {
                     backgroundColor: "#00111c",
                   }}
                 />
+                <TableCell
+                  style={{
+                    borderTop: "1px solid white",
+                    backgroundColor: "#00111c",
+                  }}
+                />
                 {columns.map((column) => (
                   <TableCell
                     key={column.id}
+                    align={column.align}
                     style={{
                       minWidth: column.minWidth,
                       backgroundColor: "#00111c",

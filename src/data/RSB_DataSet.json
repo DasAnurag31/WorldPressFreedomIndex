@@ -921,7 +921,7 @@
   },
   {
     "Ranking": 93,
-    "Country": "Congo-Brazzaville",
+    "Country": "Congo",
     "Score": 58.64,
     "PoliticalContext": 58.06,
     "EconomicContext": 48.57,
@@ -1341,7 +1341,7 @@
   },
   {
     "Ranking": 135,
-    "Country": "Western Sahara",
+    "Country": "Morocco",
     "Score": 45.42,
     "PoliticalContext": 51.67,
     "EconomicContext": 28.83,

@@ -47,7 +47,7 @@ const handleCountry = (feature, layer) => {
       } else if (ele.Score > 40) {
         layer.options.fillColor = "#e5383b";
       } else if (ele.Score > 0) {
-        layer.options.fillColor = "#780116";
+        layer.options.fillColor = "#820263";
       }
     }
   });

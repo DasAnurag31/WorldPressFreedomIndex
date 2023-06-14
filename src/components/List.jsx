@@ -53,7 +53,7 @@ const List = () => {
                       ? `bg-orange-400`
                       : ele.Score > 40
                       ? `bg-red-600`
-                      : `bg-red-900`
+                      : `bg-[#820263]`
                   }  rounded-md `}
                 ></div>
                 <div className="w-[20%] text-center font-bold">
@@ -70,7 +70,7 @@ const List = () => {
 
       <div className="backdrop-blur-2xl mt-4 rounded-md">
         <div className="flex h-[7px]">
-          <div className=" w-[20%] rounded-l bg-red-900"></div>
+          <div className=" w-[20%] rounded-l bg-[#820263]"></div>
           <div className="w-[20%] bg-red-600"></div>
           <div className="w-[20%] bg-orange-400"></div>
           <div className="w-[20%] bg-yellow-500"></div>
