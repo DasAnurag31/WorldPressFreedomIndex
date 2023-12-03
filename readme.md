@@ -1,7 +1,5 @@
 # World Press Freedom Index 2023 Visualization
 
-![World Press Freedom Index](https://world-press-freedom-index.vercel.app/)
-
 ## Overview
 
 This project aims to visualize the World Press Freedom Index for the year 2023. Leveraging React.js, Leaflet.js, and client-side paginated tables, the application offers an interactive and mobile-responsive interface for users to explore and understand the press freedom rankings across the globe.
@@ -9,12 +7,13 @@ This project aims to visualize the World Press Freedom Index for the year 2023. 
 ## Features
 
 - **Interactive Maps:** Utilizes Leaflet.js to provide dynamic and interactive maps for a visual representation of press freedom index data.
-
 - **Client-Side Paginated Tables:** Implements paginated tables on the client side, ensuring efficient handling and presentation of large datasets.
-
 - **Mobile Responsiveness:** Designed with a mobile-first approach, ensuring optimal user experience across various devices and screen sizes.
-
 - **Authentication and Authorization:** Full-stack authentication system with email verification, OTP, and additional options such as Google Sign-In and GitHub authentication. Utilizes JWT tokens and HTTP-only cookies for secure user authentication.
+
+## Demo
+
+Explore the application [here](https://world-press-freedom-index.vercel.app/).
 
 ## Getting Started
 
